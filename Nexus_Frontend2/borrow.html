@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Nexus Borrow</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+            
+        body{
+            /* width: 1512px;
+            height: 982px; */
+            /* background-image: url('./MAIN4.jpg'); */
+            background-size: cover;
+            background-color: black;
+            background-repeat: no-repeat;
+            /* background-attachment: fixed; */
+        }
+
+        .continue_wallet1{
+            background-color: rgb(74, 215, 163);
+            /* margin-top: 32px; */
+            margin-left: -1px;
+            padding: 20px;
+            width: 146px;
+            height: 72px;
+            border: none;
+            border-radius: 15px;
+            color: rgb(0, 0, 32);
+            font-weight: bold;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 33px;
+            transition: background-color 0.4s, color 0.4s; 
+        }
+
+        .continue_wallet1:hover{
+            /* background-color: rgb(74, 215, 163);
+            margin-top: 639px;
+            margin-left: 80px;
+            padding: 16px;
+            width: 271px;
+            border: none;
+            border-radius: 6px;
+            color: rgb(0, 0, 32);
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer; */
+            background-color: rgb(163,237,210);
+            color: rgb(0, 0, 32);
+        }
+
+        .continue_wallet2{
+            background-color: rgb(74, 215, 163);
+            /* margin-top: 32px; */
+            margin-left: -1px;
+            padding: 20px;
+            width: 146px;
+            height: 72px;
+            border: none;
+            border-radius: 15px;
+            color: rgb(0, 0, 32);
+            font-weight: bold;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 32px;
+            transition: background-color 0.4s, color 0.4s; 
+        }
+
+        .continue_wallet2:hover{
+            /* background-color: rgb(74, 215, 163);
+            margin-top: 639px;
+            margin-left: 80px;
+            padding: 16px;
+            width: 271px;
+            border: none;
+            border-radius: 6px;
+            color: rgb(0, 0, 32);
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer; */
+            background-color: rgb(163,237,210);
+            color: rgb(0, 0, 32);
+        }
+
+        .continue_wallet3{
+            background-color: rgb(74, 215, 163);
+            /* margin-top: 32px; */
+            margin-left: -1px;
+            padding: 20px;
+            width: 146px;
+            height: 72px;
+            border: none;
+            border-radius: 15px;
+            color: rgb(0, 0, 32);
+            font-weight: bold;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 33px;
+            transition: background-color 0.4s, color 0.4s; 
+        }
+
+        .continue_wallet3:hover{
+            /* background-color: rgb(74, 215, 163);
+            margin-top: 639px;
+            margin-left: 80px;
+            padding: 16px;
+            width: 271px;
+            border: none;
+            border-radius: 6px;
+            color: rgb(0, 0, 32);
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer; */
+            background-color: rgb(163,237,210);
+            color: rgb(0, 0, 32);
+        }
+
+        .continue_wallet4{
+            background-color: rgb(74, 215, 163);
+            /* margin-top: 32px; */
+            margin-left: -1px;
+            padding: 20px;
+            width: 146px;
+            height: 72px;
+            border: none;
+            border-radius: 15px;
+            color: rgb(0, 0, 32);
+            font-weight: bold;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 33px;
+            transition: background-color 0.4s, color 0.4s; 
+        }
+
+        .continue_wallet4:hover{
+            /* background-color: rgb(74, 215, 163);
+            margin-top: 639px;
+            margin-left: 80px;
+            padding: 16px;
+            width: 271px;
+            border: none;
+            border-radius: 6px;
+            color: rgb(0, 0, 32);
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer; */
+            background-color: rgb(163,237,210);
+            color: rgb(0, 0, 32);
+        }
+
+        .continue_wallet5{
+            background-color: rgb(74, 215, 163);
+            /* margin-top: 32px; */
+            margin-left: -1px;
+            padding: 20px;
+            width: 146px;
+            height: 72px;
+            border: none;
+            border-radius: 15px;
+            color: rgb(0, 0, 32);
+            font-weight: bold;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 33px;
+            transition: background-color 0.4s, color 0.4s; 
+        }
+
+        .continue_wallet5:hover{
+            /* background-color: rgb(74, 215, 163);
+            margin-top: 639px;
+            margin-left: 80px;
+            padding: 16px;
+            width: 271px;
+            border: none;
+            border-radius: 6px;
+            color: rgb(0, 0, 32);
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer; */
+            background-color: rgb(163,237,210);
+            color: rgb(0, 0, 32);
+        }
+
+        .continue_wallet6{
+            background-color: rgb(74, 215, 163);
+            /* margin-top: 32px; */
+            margin-left: -1px;
+            padding: 20px;
+            width: 146px;
+            height: 72px;
+            border: none;
+            border-radius: 15px;
+            color: rgb(0, 0, 32);
+            font-weight: bold;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 33px;
+            transition: background-color 0.4s, color 0.4s; 
+        }
+
+        .continue_wallet6:hover{
+            /* background-color: rgb(74, 215, 163);
+            margin-top: 639px;
+            margin-left: 80px;
+            padding: 16px;
+            width: 271px;
+            border: none;
+            border-radius: 6px;
+            color: rgb(0, 0, 32);
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer; */
+            background-color: rgb(163,237,210);
+            color: rgb(0, 0, 32);
+        }
+
+        /* nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 35px;
+            padding-left: 51%;
+        }
+        nav ul li{
+            font-size: 24px;
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px 51px;
+            font-family: 'Jost', sans-serif;
+            
+        }
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+        nav ul li a:hover{
+            color: rgb(74, 215, 163);
+            text-decoration: underline;
+            font-weight: bold;
+            
+        } */
+
+        .wallet{
+            font-family: 'Iceland', cursive;
+            font-weight: 500;
+            font-size: 37px;
+        }
+
+        .BigProf{
+            border-radius: 15px;
+            display: block;
+        }
+
+        .Profile{
+            margin-left: 1299px;
+            margin-top: 47px;
+
+            position: absolute;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+            cursor: pointer;
+        }
+
+        .avatar {
+            vertical-align: middle;
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+        }
+
+        .BackB{
+            margin-top: 47px;
+            margin-left: 44px;
+            font-size: 35px;
+            font-weight: 700;
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: color 0.4s;
+            
+        }
+
+        .BackB:hover{
+            color: rgb(74, 215, 163);
+        }
+
+        .ProfB{
+            cursor : pointer;
+        }
+
+        /* .InputBox input{
+            margin-top: 416px;
+            margin-left: 480px;
+            width:35.35%;
+            padding: 17px;
+            border: none;
+            border-radius: 11px;
+            background: white;
+            background-color: transparent;
+            
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            font-family: 'Jost', sans-serif;
+        } */
+
+        .Beech {
+                width: 100px;
+                height: 100px;
+                /* background-color: red; */
+                
+                position: absolute;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                
+                margin-top: 377px;
+                margin-left: 940px;
+            }
+            ::placeholder{
+                color: rgb(183, 183, 183);
+                font-weight: 10;
+            }
+
+            p{
+                color: white;
+            }
+
+            nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 260px;
+            padding-left: 50px;
+
+             }
+
+             nav ul li{
+            font-size: 24px;
+            list-style-type: none;
+            display: inline-block;
+            padding:10;
+            font-family: 'Jost', sans-serif;
+            
+        }
+        nav ul li p{
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s, text-decoration 0.3s;
+            margin: 20px;
+        }
+
+
+            /* .amount{
+                margin-right: 100px;
+            } */
+
+            li {
+              border: 2px solid white;
+            }
+    </style>
+
+</head>
+
+<body>
+    <!-- <div class = "navbar">
+            <nav>
+                <ul>
+                    <li><a href="#">What</a></li>
+                    <li><a href="#">How</a></li>
+                    <li><a href="#">Why</a></li>
+                    <li><a href="#">Who</a></li>
+                </ul>
+            </nav>
+        </div>  -->
+    <button class="btn-all" onclick="window.location.href='http:/LB';">&#60</button>
+    <a class="ProB">
+        <div class="Profile">
+            <img src="Profile_DP.jpg" alt="Avatar" class="avatar" onclick="profile()">
+        </div>
+    </a>
+    <div class="InputBox">
+        <input type="text" required="required" id="Amount" placeholder="Enter Filecoin (TFIL) amount">
+    </div>
+    <div class="Beech">
+        <button class="btn-all" onclick="Borrow()"><span class="wallet">Borrow</span></button>
+    </div>
+</body>
+<script>
+    let account;
+    const ConnectWallet = async () => {
+        const provider = window.ethereum;
+        const HyperspaceTestChainId = '0xC45';
+        if (provider !== "undefined") {
+            const chainId = await provider.request({ method: 'eth_chainId' });
+            if (chainId === HyperspaceTestChainId) {
+                console.log("Bravo!, you are on the correct network");
+            }
+            else {
+                console.log("Wrong Network, Switch to correct network");
+                try {
+                    await provider.request({
+                        method: 'wallet_switchEthereumChain',
+                        params: [{ chainId: HyperspaceTestChainId }],
+                    });
+                    console.log("You have succefully switched to FVM Test network")
+                } catch (switchError) {
+                    // This error code indicates that the chain has not been added to MetaMask.
+                    if (switchError.code === 4902) {
+                        console.log("This network is not available in your metamask, please add it")
+                    }
+                    console.log("Failed to switch to the network")
+                }
+            }
+            const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+            account = accounts[0];
+        }
+    };
+    const Borrow = async () => {
+        //change to hyperspace testnet and get address
+        await ConnectWallet();
+        const ABI =
+            [
+                {
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "previousOwner",
+                            "type": "address"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "OwnershipTransferred",
+                    "type": "event"
+                },
+                {
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": true,
+                            "internalType": "uint256",
+                            "name": "B_id",
+                            "type": "uint256"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "B_address",
+                            "type": "address"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "uint256",
+                            "name": "_amount",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "_Borrow",
+                    "type": "event"
+                },
+                {
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": true,
+                            "internalType": "uint256",
+                            "name": "B_id",
+                            "type": "uint256"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "L_address",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "_lend",
+                    "type": "event"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "B_data",
+                    "outputs": [
+                        {
+                            "internalType": "address payable",
+                            "name": "B_address",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "amount",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "hasRecieved",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function"
+                },
+                {
+                    "inputs": [],
+                    "name": "CurrentBid",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address payable",
+                            "name": "_address",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "_amount",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "borrow",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "B_ID",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "lend",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "payable",
+                    "type": "function"
+                },
+                {
+                    "inputs": [],
+                    "name": "owner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function"
+                },
+                {
+                    "inputs": [],
+                    "name": "renounceOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                }
+            ]
+        const Address = "0xAD110dBBc425B00896967f2eee5e064857e37C6F";
+        console.log("connecting with web3");
+        window.web3 = await new Web3(window.ethereum);
+        window.contract = await new window.web3.eth.Contract(ABI, Address);
+        console.log("web3 contract await done");
+        let value = Web3.utils.toWei(document.getElementById('Amount').value, 'ether')
+        console.log("in borrowing staage");
+        console.log(`accoount : ${account} + value : ${value}`);
+        await window.contract.methods.borrow(account, value).send({ from: account });
+        console.log("borrow done");
+        let Current_B_Id = await window.contract.methods.CurrentBid().call({ from: account });
+        console.log("B_id : " + Current_B_Id);
+        let _amount = document.getElementById('Amount').value;
+        const reqOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ BID: Current_B_Id, Address: `${account}`, amount: _amount })
+        };
+        console.log('done done done- borrow done');
+        goToLB();
+        await fetch(`http://127.0.0.1:3000/`, reqOptions);
+        await getAllBorrow();
+
+    };
+    const getAllBorrow = async () => {
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        fetch("http://127.0.0.1:3000/get", requestOptions)
+            .then(response => response.text())
+            .then((result) => {
+                // var bid = JSON.parse(result).BID;
+                // var address = JSON.parse(result).Address;
+                // var credit_score = JSON.parse(result).creditScore;
+                // var _amount = JSON.parse(result).amount;
+                localStorage.setItem("Response_data", result);
+            }
+            )
+            .catch(error => console.log('error', error));
+    };
+    const profile = () => {
+        window.location.href = "http:/profile";
+    }
+    const goToLB = () => {
+        window.location.href = "http:/LB";
+    }
+</script>
+
+</html>

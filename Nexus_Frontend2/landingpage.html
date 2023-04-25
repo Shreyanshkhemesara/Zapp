@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Zapp Home</title>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Iceland&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+            
+      body{
+          /* width: 1512px;
+          height: 982px; */
+          /* background-image: url('./MAIN4.jpg'); */
+          background-size: cover;
+          background-color: black;
+          background-repeat: no-repeat;
+          /* background-attachment: fixed; */
+      }
+
+      .continue_wallet1{
+          background-color: rgb(74, 215, 163);
+          /* margin-top: 32px; */
+          margin-left: -1px;
+          padding: 20px;
+          width: 146px;
+          height: 72px;
+          border: none;
+          border-radius: 15px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 24px;
+          cursor: pointer;
+          margin-bottom: 33px;
+          transition: background-color 0.4s, color 0.4s; 
+      }
+
+      .continue_wallet1:hover{
+          /* background-color: rgb(74, 215, 163);
+          margin-top: 639px;
+          margin-left: 80px;
+          padding: 16px;
+          width: 271px;
+          border: none;
+          border-radius: 6px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 18px;
+          cursor: pointer; */
+          background-color: rgb(163,237,210);
+          color: rgb(0, 0, 32);
+      }
+
+      .continue_wallet2{
+          background-color: rgb(74, 215, 163);
+          /* margin-top: 32px; */
+          margin-left: -1px;
+          padding: 20px;
+          width: 146px;
+          height: 72px;
+          border: none;
+          border-radius: 15px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 24px;
+          cursor: pointer;
+          margin-bottom: 32px;
+          transition: background-color 0.4s, color 0.4s; 
+      }
+
+      .continue_wallet2:hover{
+          /* background-color: rgb(74, 215, 163);
+          margin-top: 639px;
+          margin-left: 80px;
+          padding: 16px;
+          width: 271px;
+          border: none;
+          border-radius: 6px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 18px;
+          cursor: pointer; */
+          background-color: rgb(163,237,210);
+          color: rgb(0, 0, 32);
+      }
+
+      .continue_wallet3{
+          background-color: rgb(74, 215, 163);
+          /* margin-top: 32px; */
+          margin-left: -1px;
+          padding: 20px;
+          width: 146px;
+          height: 72px;
+          border: none;
+          border-radius: 15px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 24px;
+          cursor: pointer;
+          margin-bottom: 33px;
+          transition: background-color 0.4s, color 0.4s; 
+      }
+
+      .continue_wallet3:hover{
+          /* background-color: rgb(74, 215, 163);
+          margin-top: 639px;
+          margin-left: 80px;
+          padding: 16px;
+          width: 271px;
+          border: none;
+          border-radius: 6px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 18px;
+          cursor: pointer; */
+          background-color: rgb(163,237,210);
+          color: rgb(0, 0, 32);
+      }
+
+      .continue_wallet4{
+          background-color: rgb(74, 215, 163);
+          /* margin-top: 32px; */
+          margin-left: -1px;
+          padding: 20px;
+          width: 146px;
+          height: 72px;
+          border: none;
+          border-radius: 15px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 24px;
+          cursor: pointer;
+          margin-bottom: 33px;
+          transition: background-color 0.4s, color 0.4s; 
+      }
+
+      .continue_wallet4:hover{
+          /* background-color: rgb(74, 215, 163);
+          margin-top: 639px;
+          margin-left: 80px;
+          padding: 16px;
+          width: 271px;
+          border: none;
+          border-radius: 6px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 18px;
+          cursor: pointer; */
+          background-color: rgb(163,237,210);
+          color: rgb(0, 0, 32);
+      }
+
+      .continue_wallet5{
+          background-color: rgb(74, 215, 163);
+          /* margin-top: 32px; */
+          margin-left: -1px;
+          padding: 20px;
+          width: 146px;
+          height: 72px;
+          border: none;
+          border-radius: 15px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 24px;
+          cursor: pointer;
+          margin-bottom: 33px;
+          transition: background-color 0.4s, color 0.4s; 
+      }
+
+      .continue_wallet5:hover{
+          /* background-color: rgb(74, 215, 163);
+          margin-top: 639px;
+          margin-left: 80px;
+          padding: 16px;
+          width: 271px;
+          border: none;
+          border-radius: 6px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 18px;
+          cursor: pointer; */
+          background-color: rgb(163,237,210);
+          color: rgb(0, 0, 32);
+      }
+
+      .continue_wallet6{
+          background-color: rgb(74, 215, 163);
+          /* margin-top: 32px; */
+          margin-left: -1px;
+          padding: 20px;
+          width: 146px;
+          height: 72px;
+          border: none;
+          border-radius: 15px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 24px;
+          cursor: pointer;
+          margin-bottom: 33px;
+          transition: background-color 0.4s, color 0.4s; 
+      }
+
+      .continue_wallet6:hover{
+          /* background-color: rgb(74, 215, 163);
+          margin-top: 639px;
+          margin-left: 80px;
+          padding: 16px;
+          width: 271px;
+          border: none;
+          border-radius: 6px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 18px;
+          cursor: pointer; */
+          background-color: rgb(163,237,210);
+          color: rgb(0, 0, 32);
+      }
+
+      /* nav{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 35px;
+          padding-left: 51%;
+      }
+      nav ul li{
+          font-size: 24px;
+          list-style-type: none;
+          display: inline-block;
+          padding: 10px 51px;
+          font-family: 'Jost', sans-serif;
+          
+      }
+      nav ul li a{
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.3s, text-decoration 0.3s;
+      }
+      nav ul li a:hover{
+          color: rgb(74, 215, 163);
+          text-decoration: underline;
+          font-weight: bold;
+          
+      } */
+
+      .wallet{
+          font-family: 'Iceland', cursive;
+          font-weight: 500;
+          font-size: 37px;
+      }
+
+      .BigProf{
+          border-radius: 15px;
+          display: block;
+      }
+
+      .Profile{
+          margin-left: 1299px;
+          margin-top: 47px;
+
+          position: absolute;
+              top:0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+
+          cursor: pointer;
+      }
+
+      .avatar {
+          vertical-align: middle;
+          width: 68px;
+          height: 68px;
+          border-radius: 50%;
+      }
+
+      .BackB{
+          margin-top: 47px;
+          margin-left: 44px;
+          font-size: 35px;
+          font-weight: 700;
+          background-color: transparent;
+          border: none;
+          color: white;
+          cursor: pointer;
+          transition: color 0.4s;
+          
+      }
+
+      .BackB:hover{
+          color: rgb(74, 215, 163);
+      }
+
+      .ProfB{
+          cursor : pointer;
+      }
+
+      /* .InputBox input{
+          margin-top: 416px;
+          margin-left: 480px;
+          width:35.35%;
+          padding: 17px;
+          border: none;
+          border-radius: 11px;
+          background: white;
+          background-color: transparent;
+          
+          color: rgb(255, 255, 255);
+          font-size: 24px;
+          font-family: 'Jost', sans-serif;
+      } */
+
+      .Beech {
+              width: 100px;
+              height: 100px;
+              /* background-color: red; */
+              
+              position: absolute;
+              top:0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              
+              margin-top: 377px;
+              margin-left: 940px;
+          }
+          ::placeholder{
+              color: rgb(183, 183, 183);
+              font-weight: 10;
+          }
+
+          p{
+              color: white;
+          }
+
+          nav{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 260px;
+          padding-left: 50px;
+
+           }
+
+           nav ul li{
+          font-size: 24px;
+          list-style-type: none;
+          display: inline-block;
+          padding:10;
+          font-family: 'Jost', sans-serif;
+          
+      }
+      nav ul li p{
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s, text-decoration 0.3s;
+          margin: 20px;
+      }
+
+
+          /* .amount{
+              margin-right: 100px;
+          } */
+
+          li {
+            border: 2px solid white;
+          }
+  </style>
+
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="Logo" href="/">Zapp</a>
+      <a style="margin-left: 120vh;" class="What" href="#">What</a>
+      <a href="http:/how">Implementation doc</a>
+      <a href="http:/why">Zap need</a>
+      <a href="http:/who">About us</a>
+    </div>
+    <!-- <button class="button-49" role="button">Button 49</button> -->
+    <div class="button-holder">
+      <button type="button" class="continue_wallet" role="button" onClick="button()">
+        <span class="wallet">Connect </span>
+      </button>
+    </div>
+  </body>
+  <script>
+    //connect metamask
+    let account;
+    const ConnectWallet = async () => {
+      const provider = window.ethereum;
+      const MumbaiTestChainId = "0x13881";
+      if (provider !== "undefined") {
+        const chainId = await provider.request({ method: "eth_chainId" });
+        if (chainId === MumbaiTestChainId) {
+          console.log("Bravo!, you are on the correct network");
+        } else {
+          console.log("Wrong Network, Switch to correct network");
+          try {
+            await provider.request({
+              method: "wallet_switchEthereumChain",
+              params: [{ chainId: MumbaiTestChainId }],
+            });
+            console.log("You have succefully switched to Polygon Test network");
+          } catch (switchError) {
+            // This error code indicates that the chain has not been added to MetaMask.
+            if (switchError.code === 4902) {
+              console.log(
+                "This network is not available in your metamask, please add it"
+              );
+            }
+            console.log("Failed to switch to the network");
+          }
+        }
+        console.log("connected to : " + chainId);
+        const accounts = await ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        account = accounts[0];
+      }
+    };
+    const mint = async () => {
+      const ABI = 
+      [
+        {
+          inputs: [],
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "owner",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "approved",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+          ],
+          name: "Approval",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "owner",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "operator",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "bool",
+              name: "approved",
+              type: "bool",
+            },
+          ],
+          name: "ApprovalForAll",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "to",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+          ],
+          name: "Attest",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "previousOwner",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "newOwner",
+              type: "address",
+            },
+          ],
+          name: "OwnershipTransferred",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "to",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+          ],
+          name: "Revoke",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "from",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "to",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+          ],
+          name: "Transfer",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "to",
+              type: "address",
+            },
+            {
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+          ],
+          name: "approve",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "owner",
+              type: "address",
+            },
+          ],
+          name: "balanceOf",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+          ],
+          name: "burn",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+          ],
+          name: "getApproved",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "owner",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "operator",
+              type: "address",
+            },
+          ],
+          name: "isApprovedForAll",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "name",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "owner",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+          ],
+          name: "ownerOf",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "renounceOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+          ],
+          name: "revoke",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "to",
+              type: "address",
+            },
+            {
+              internalType: "string",
+              name: "uri",
+              type: "string",
+            },
+          ],
+          name: "safeMint",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "from",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "to",
+              type: "address",
+            },
+            {
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+          ],
+          name: "safeTransferFrom",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "from",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "to",
+              type: "address",
+            },
+            {
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+            {
+              internalType: "bytes",
+              name: "data",
+              type: "bytes",
+            },
+          ],
+          name: "safeTransferFrom",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "operator",
+              type: "address",
+            },
+            {
+              internalType: "bool",
+              name: "approved",
+              type: "bool",
+            },
+          ],
+          name: "setApprovalForAll",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes4",
+              name: "interfaceId",
+              type: "bytes4",
+            },
+          ],
+          name: "supportsInterface",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "symbol",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+          ],
+          name: "tokenURI",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "from",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "to",
+              type: "address",
+            },
+            {
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+          ],
+          name: "transferFrom",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "newOwner",
+              type: "address",
+            },
+          ],
+          name: "transferOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ];
+      const Address = "0xAD110dBBc425B00896967f2eee5e064857e37C6F";
+      window.web3 = await new Web3(window.ethereum);
+      window.contract = await new window.web3.eth.Contract(ABI, Address);
+      console.log("account: " + account);
+      await window.contract.methods
+        .safeMint(
+          account,
+          "https://nftstorage.link/ipfs/bafkreib45afowcsprbz63kcb54t5gsbnuxpfsrcrg6qdesnivjf2tlmswi"
+        )
+        .send({ from: account });
+    };
+
+    let redirect_Page = () => {
+      let tID = setTimeout(function () {
+        window.location.href = "http:/minted";
+        window.clearTimeout(tID); // clear time out.
+      }, 1000);
+    };
+
+    const button = async () => {
+      await ConnectWallet();
+      console.log("connected - wallet");
+      await mint();
+      console.log("minted");
+      redirect_Page();
+      console.log("redirecting");
+    };
+  </script>
+</html>

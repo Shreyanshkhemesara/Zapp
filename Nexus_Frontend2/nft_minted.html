@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Signed In</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+        <style>
+            
+          body{
+              /* width: 1512px;
+              height: 982px; */
+              /* background-image: url('./MAIN4.jpg'); */
+              /* background-size: cover; */
+              color: white;
+              background-color: black;
+              /* background-repeat: no-repeat; */
+              /* background-attachment: fixed; */
+          }
+          .Profile{
+              margin-left: 726px;
+              margin-top: 47px;
+
+              position: absolute;
+                  top:0;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+
+              cursor: pointer;
+          }
+
+          .avatar {
+              vertical-align: middle;
+              width: 68px;
+              height: 68px;
+              border-radius: 50%;
+          }
+
+          .BackB{
+              margin-top: 47px;
+              margin-left: 44px;
+              font-size: 35px;
+              font-weight: 700;
+              background-color: transparent;
+              border: none;
+              color: white;
+              cursor: pointer;
+              transition: color 0.4s;
+              
+          }
+
+          .BackB:hover{
+              color: rgb(74, 215, 163);
+          }
+
+          .ProfB{
+              cursor : pointer;
+          }
+
+          /* .InputBox input{
+              margin-top: 416px;
+              margin-left: 480px;
+              width:35.35%;
+              padding: 17px;
+              border: none;
+              border-radius: 11px;
+              background: white;
+              background-color: transparent;
+              
+              color: rgb(255, 255, 255);
+              font-size: 24px;
+              font-family: 'Jost', sans-serif;
+          } */
+
+        
+              ::placeholder{
+                  color: rgb(183, 183, 183);
+                  font-weight: 10;
+              }
+
+              p{
+                  color: white;
+              }
+
+              nav{
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding-top: 260px;
+              padding-left: 50px;
+
+               }
+
+               nav ul li{
+              font-size: 24px;
+              list-style-type: none;
+              display: inline-block;
+              padding:10;
+              font-family: 'Jost', sans-serif;
+              
+          }
+          nav ul li p{
+              color: white;
+              text-decoration: none;
+              transition: color 0.3s, text-decoration 0.3s;
+              margin: 20px;
+          }
+
+
+              /* .amount{
+                  margin-right: 100px;
+              } */
+
+              li {
+                border: 2px solid white;
+              }
+
+           .Beech {
+            margin-top: 150px;
+            margin-left: 640px;
+           }   
+/* CSS */
+.btn-all,
+.btn-all:after {
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-all:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'ALTERNATE TEXT';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.btn-all:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-all,
+  .btn-all:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+      </style>
+    </head>
+    <body>
+        <div class = "Profile">
+            <img src="Profile_DP.jpg" alt="Avatar" class="avatar">     
+        </div>
+       
+        <div class = "Beech">
+            <h1>Minted succcessfuly </h1>
+            <!-- <img class = "BigProf" src = "Big_profile_2.jpg"> -->
+            <button class="btn-all" onclick="proceed()"><span class="wallet">Proceed ></span></button>      
+        </div>
+    </body>
+    <script>
+        const proceed = ()=>{
+            window.location.href = "http:/LB";
+        }
+    </script>
+</html>

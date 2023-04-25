@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSON to Table</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JSON to Table</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>B_id</th>
+          <th>Amount</th>
+          <th>Address</th>
+          <th>Credit_score</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+      </tbody>
+    </table>
+
+    <script>
+      const jsonData = [
+        {
+          "B_id": 1,
+          "Amount": 5000,
+          "Address": "123 Main St.",
+          "Credit_score": 750
+        },
+        {
+          "B_id": 2,
+          "Amount": 10000,
+          "Address": "456 Oak Ave.",
+          "Credit_score": 680
+        },
+        {
+          "B_id": 3,
+          "Amount": 15000,
+          "Address": "789 Elm St.",
+          "Credit_score": 820
+        }
+      ];
+
+      const tableBody = document.querySelector("#table-body");
+
+      for (let i = 0; i < jsonData.length; i++) {
+        const row = document.createElement("tr");
+        const bIdCell = document.createElement("td");
+        bIdCell.innerText = jsonData[i].B_id;
+        const amountCell = document.createElement("td");
+        amountCell.innerText = jsonData[i].Amount;
+        const addressCell = document.createElement("td");
+        addressCell.innerText = jsonData[i].Address;
+        const creditScoreCell = document.createElement("td");
+        creditScoreCell.innerText = jsonData[i].Credit_score;
+        row.appendChild(bIdCell);
+        row.appendChild(amountCell);
+        row.appendChild(addressCell);
+        row.appendChild(creditScoreCell);
+        tableBody.appendChild(row);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Nexus Borrow</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+
+        <style>
+            body{
+                /* background-image: url('./MAIN6.jpg'); */
+                background-color: black;
+                /* background-attachment: fixed; */
+            }
+            input {
+                color: black;
+            }
+            .continue_wallet{
+                background-color: rgb(74, 215, 163);
+                margin-top: 145px;
+                margin-left: -1px;
+                padding: 20px;
+                width: 271px;
+                border: none;
+                border-radius: 15px;
+                color: rgb(0, 0, 32);
+                font-weight: bold;
+                font-size: 24px;
+                cursor: pointer;
+                transition: background-color 0.4s, color 0.4s; 
+            }
+
+            .continue_wallet:hover{
+                /* background-color: rgb(74, 215, 163);
+                margin-top: 639px;
+                margin-left: 80px;
+                padding: 16px;
+                width: 271px;
+                border: none;
+                border-radius: 6px;
+                color: rgb(0, 0, 32);
+                font-weight: bold;
+                font-size: 18px;
+                cursor: pointer; */
+                background-color: rgb(163,237,210);
+                color: rgb(0, 0, 32);
+            }
+
+            /* nav{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 35px;
+                padding-left: 51%;
+            }
+            nav ul li{
+                font-size: 24px;
+                list-style-type: none;
+                display: inline-block;
+                padding: 10px 51px;
+                font-family: 'Jost', sans-serif;
+                
+            }
+            nav ul li a{
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s, text-decoration 0.3s;
+            }
+            nav ul li a:hover{
+                color: rgb(74, 215, 163);
+                text-decoration: underline;
+                font-weight: bold;
+                
+            } */
+
+            .wallet{
+                font-family: 'Iceland', cursive;
+                font-weight: 500;
+                font-size: 37px;
+            }
+
+            .BigProf{
+                border-radius: 15px;
+                display: block;
+            }
+
+            .Profile{
+                /* margin-left: 1400px;
+                margin-top: 47px; */
+
+                position: absolute;
+                left: 100vh;
+                cursor: pointer;
+            }
+
+            .avatar {
+                vertical-align: middle;
+                width: 68px;
+                /* height: 68px; */
+                border-radius: 50%;
+                position: absolute;
+            }
+
+
+            .BackB:hover{
+                color: rgb(74, 215, 163);
+            }
+
+            .ProfB{
+                cursor : pointer;
+            }
+
+                /* ::placeholder{
+                    color: rgb(183, 183, 183);
+                    font-weight: 10;
+                } */
+
+                p{
+                    color: white;
+                    font-family: 'Jost', sans-serif;
+                }
+
+                .address{
+                    background-color: black;
+                    border: 2px solid white;
+                    border-radius: 3px;
+                    padding: 30px;
+                    width: 65vh;
+                }
+
+                .amount{
+                    background-color: black;
+                    border: 2px solid white;
+                    border-radius: 3px;
+                    padding: 30px;
+                    width: 65vh;
+                }
+
+                div {
+                    /* color: white; */
+                }
+
+
+                .baap {
+                    margin-top: 200px;
+                    margin-left: 500px;
+                    /* display: flex;
+                    flex-wrap: wrap; */
+                    justify-items: center;
+                }
+                 /* CSS */
+  .btn-all {
+    margin: 10px;
+    margin-left: 0px;
+  }
+  .btn-all,
+  .btn-all:after {
+    width: 150px;
+    height: 76px;
+    line-height: 78px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #00E6F6;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .btn-all:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    
+    content: 'ALTERNATE TEXT';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+  }
+  
+  .btn-all:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+  }
+  
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .btn-all,
+    .btn-all:after {
+      width: 200px;
+      height: 86px;
+      line-height: 88px;
+    }
+  }
+ input { 
+    font-size: large;
+    size: 100px;
+    margin-left: 100px;
+ }
+ .btn-all {
+    margin-left: 200px;    
+}
+                
+        </style>
+    </head>
+    <body>
+        <button class ="BackB" onclick="lendlist()">&#60</button>
+        <a class = "ProB">
+            <div class = "Profile">
+                <img src="Profile_DP.jpg"alt="Avatar"class="avatar" onclick="profile()">     
+            </div>
+        </a>
+        <div class="baap">
+            <p id="address" class="address">Address : </p>
+            <p id="amount" class="amount">Amount to be given : </p>
+            <div class="ipBox" >
+                <!-- Interest rate : -->
+                <input type ="text" id="rate" placeholder="Interest rate" required = "required" >
+            </div>
+            <div class="ipBox1" >
+                <!-- B id for transaction ref -->
+                <input type ="text" id="b_id" placeholder="B id" required = "required" >
+            </div>
+            <div class = "Beech">
+                <button class="btn-all" onclick="lendFinal()"><span class="wallet">Lend</span></button>      
+            </div>
+        </div>
+    </body>
+    <script>
+        const lendlist = ()=>{
+            window.location.href = "http:/lend";
+        };
+        const profile = ()=>{
+            window.location.href = "http:/profile";
+        }
+
+        var result = localStorage.getItem("Response_data");
+        var bid = JSON.parse(result)[0].BID;
+        var address = JSON.parse(result)[0].Address;
+        document.getElementById("address").innerHTML += address;
+        var credit_score = JSON.parse(result)[0].creditScore;
+        var _amount = JSON.parse(result)[0].amount;
+        document.getElementById("amount").innerHTML += _amount;
+        let account;
+		const ConnectWallet = async() =>{
+            const provider = window.ethereum;
+            const HyperspaceTestChainId = '0xC45';
+			if(provider !== "undefined"){
+                const chainId = await provider.request({ method: 'eth_chainId' });
+                if(chainId === HyperspaceTestChainId){
+                    console.log("Bravo!, you are on the correct network");
+                }
+                else{
+                    console.log("Wrong Network, Switch to correct network");
+                    try {
+                        await provider.request({
+                            method: 'wallet_switchEthereumChain',
+                            params: [{ chainId: HyperspaceTestChainId}],
+                        });
+                        console.log("You have succefully switched to FVM Test network")
+                        } catch (switchError) {
+                        // This error code indicates that the chain has not been added to MetaMask.
+                            if (switchError.code === 4902) {
+                            console.log("This network is not available in your metamask, please add it")
+                        }
+                            console.log("Failed to switch to the network")
+                    }
+                }
+                console.log("will find accounts now:");
+                const accounts = await ethereum.request({method:"eth_requestAccounts"});
+                console.log("accoiutns found")
+				account = accounts[0];
+                console.log("account: " + account)
+			}
+		};
+        const lendFinal = async()=>{
+            await ConnectWallet();
+            console.log('connected wallet')
+            const ABI =
+            [
+                {
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "previousOwner",
+                            "type": "address"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "OwnershipTransferred",
+                    "type": "event"
+                },
+                {
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": true,
+                            "internalType": "uint256",
+                            "name": "B_id",
+                            "type": "uint256"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "B_address",
+                            "type": "address"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "uint256",
+                            "name": "_amount",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "_Borrow",
+                    "type": "event"
+                },
+                {
+                    "anonymous": false,
+                    "inputs": [
+                        {
+                            "indexed": true,
+                            "internalType": "uint256",
+                            "name": "B_id",
+                            "type": "uint256"
+                        },
+                        {
+                            "indexed": true,
+                            "internalType": "address",
+                            "name": "L_address",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "_lend",
+                    "type": "event"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address payable",
+                            "name": "_address",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "_amount",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "borrow",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "B_ID",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "lend",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "payable",
+                    "type": "function"
+                },
+                {
+                    "inputs": [],
+                    "name": "renounceOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address",
+                            "name": "newOwner",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "transferOwnership",
+                    "outputs": [],
+                    "stateMutability": "nonpayable",
+                    "type": "function"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "name": "B_data",
+                    "outputs": [
+                        {
+                            "internalType": "address payable",
+                            "name": "B_address",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "amount",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "hasRecieved",
+                            "type": "bool"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function"
+                },
+                {
+                    "inputs": [],
+                    "name": "CurrentBid",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function"
+                },
+                {
+                    "inputs": [],
+                    "name": "owner",
+                    "outputs": [
+                        {
+                            "internalType": "address",
+                            "name": "",
+                            "type": "address"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function"
+                }
+            ];
+            const Address = "0xAD110dBBc425B00896967f2eee5e064857e37C6F";
+            console.log("will lend money now")
+			window.web3 = await new Web3(window.ethereum);
+			window.contract = await new window.web3.eth.Contract(ABI,Address);
+            let B_Id = bid; // change this to get data from prev page
+            
+            const amount = await Web3.utils.toWei(`${_amount}`, 'ether');//get amount from mongo db, making it hardcoded for now;
+            console.log("waiting for ether connection")
+            await window.contract.methods.lend(B_Id).send({from:account, value:amount});
+            console.log("money lent")
+        }
+    </script>
+</html> 
