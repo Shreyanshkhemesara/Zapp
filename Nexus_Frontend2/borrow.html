@@ -634,11 +634,32 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ BID: Current_B_Id, Address: `${account}`, amount: _amount })
         };
+        console.log(reqOptions.body)
         console.log('done done done- borrow done');
-        goToLB();
-        await fetch(`http://127.0.0.1:3000/`, reqOptions);
-        await getAllBorrow();
+        // goToLB();
+        await fetch(`http://127.0.0.1:3000/`, reqOptions).then(await setAllBorrow())
+        await getAllBorrow()
 
+    };
+    
+    const setAllBorrow = async () => {
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        fetch("http://127.0.0.1:3000/get", requestOptions)
+            .then(response => response.text())
+            .then((result) => {
+                // var bid = JSON.parse(result).BID;
+                // var address = JSON.parse(result).Address;
+                // var credit_score = JSON.parse(result).creditScore;
+                // var _amount = JSON.parse(result).amount;
+                console.log(result);
+                localStorage.setItem("Response_data", result);
+            }
+            )
+            .catch(error => console.log('error', error));
     };
     const getAllBorrow = async () => {
         var requestOptions = {
@@ -653,6 +674,7 @@
                 // var address = JSON.parse(result).Address;
                 // var credit_score = JSON.parse(result).creditScore;
                 // var _amount = JSON.parse(result).amount;
+                console.log(result);
                 localStorage.setItem("Response_data", result);
             }
             )

@@ -15,7 +15,7 @@ const controller = require("./controller.js");
 
 app.post('/',controller.AddBorrower);
 app.get('/get',controller.getAllBorrow);
-
+app.delete('/', controller.delete )
 const SERVER_DB_URI=process.env.DB_URI;
 const PORT = 3000;
 const bootstrap = async () => {
