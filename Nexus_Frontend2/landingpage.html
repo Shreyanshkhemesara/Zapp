@@ -1,139 +1,406 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Who's Nexus?</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+  <head>
+    <title>Zapp Home</title>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Iceland&display=swap"
+      rel="stylesheet"
+    />
 
-        <style>
-            body{
-                width: 1512px;
-                height: 982px;
-                background-image: url('./MAIN8.jpg');
-                background-size: cover;
-                background-repeat: no-repeat;
-                background: rgb(74, 215, 163);
-                /* background-attachment: fixed; */
-            }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost&display=swap"
+      rel="stylesheet"
+    />
 
-            /* .continue_wallet{
-                background-color: rgb(74, 215, 163);
-                margin-top: 639px;
-                margin-left: 80px;
-                padding: 16px;
-                width: 271px;
-                border: none;
-                border-radius: 6px;
-                color: rgb(0, 0, 32);
-                font-weight: bold;
-                font-size: 18px;
-                cursor: pointer;
-                transition: background-color 0.4s, color 0.4s; 
-            } */
+    <style>
+            
+      body{
+          /* width: 1512px;
+          height: 982px; */
+          /* background-image: url('./MAIN4.jpg'); */
+          background-size: cover;
+          background-color: black;
+          background-repeat: no-repeat;
+          /* background-attachment: fixed; */
+      }
 
-            /* .continue_wallet:hover{
-                
-                background-color: rgb(163,237,210);
-                color: rgb(0, 0, 32);
-            } */
+      .continue_wallet1{
+          background-color: rgb(74, 215, 163);
+          /* margin-top: 32px; */
+          margin-left: -1px;
+          padding: 20px;
+          width: 146px;
+          height: 72px;
+          border: none;
+          border-radius: 15px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 24px;
+          cursor: pointer;
+          margin-bottom: 33px;
+          transition: background-color 0.4s, color 0.4s; 
+      }
 
-            nav{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                background: rgb(163,237,210);
-                padding-top: 35px;
-                padding-left: 51%;
+      .continue_wallet1:hover{
+          /* background-color: rgb(74, 215, 163);
+          margin-top: 639px;
+          margin-left: 80px;
+          padding: 16px;
+          width: 271px;
+          border: none;
+          border-radius: 6px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 18px;
+          cursor: pointer; */
+          background-color: rgb(163,237,210);
+          color: rgb(0, 0, 32);
+      }
 
-            }
+      .continue_wallet2{
+          background-color: rgb(74, 215, 163);
+          /* margin-top: 32px; */
+          margin-left: -1px;
+          padding: 20px;
+          width: 146px;
+          height: 72px;
+          border: none;
+          border-radius: 15px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 24px;
+          cursor: pointer;
+          margin-bottom: 32px;
+          transition: background-color 0.4s, color 0.4s; 
+      }
 
-            nav ul li{
-                font-size: 24px;
-                list-style-type: none;
-                display: inline-block;
-                padding: 10px 51px;
-                font-family: 'Jost', sans-serif;
-                
-            }
+      .continue_wallet2:hover{
+          /* background-color: rgb(74, 215, 163);
+          margin-top: 639px;
+          margin-left: 80px;
+          padding: 16px;
+          width: 271px;
+          border: none;
+          border-radius: 6px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 18px;
+          cursor: pointer; */
+          background-color: rgb(163,237,210);
+          color: rgb(0, 0, 32);
+      }
 
-            nav ul li a{
-                color: black;
-                text-decoration: none;
-                font-weight: bold;
-                transition: color 0.3s, text-decoration 0.3s;
-            }
+      .continue_wallet3{
+          background-color: rgb(74, 215, 163);
+          /* margin-top: 32px; */
+          margin-left: -1px;
+          padding: 20px;
+          width: 146px;
+          height: 72px;
+          border: none;
+          border-radius: 15px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 24px;
+          cursor: pointer;
+          margin-bottom: 33px;
+          transition: background-color 0.4s, color 0.4s; 
+      }
 
-            nav ul li a:hover{
-                color: black;
-                text-decoration: underline;
-                font-weight: bold;
-                
-            }
+      .continue_wallet3:hover{
+          /* background-color: rgb(74, 215, 163);
+          margin-top: 639px;
+          margin-left: 80px;
+          padding: 16px;
+          width: 271px;
+          border: none;
+          border-radius: 6px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 18px;
+          cursor: pointer; */
+          background-color: rgb(163,237,210);
+          color: rgb(0, 0, 32);
+      }
 
-            .Who{
-                color:black;
-                text-decoration: underline;
-                font-weight: bold;
-            }
+      .continue_wallet4{
+          background-color: rgb(74, 215, 163);
+          /* margin-top: 32px; */
+          margin-left: -1px;
+          padding: 20px;
+          width: 146px;
+          height: 72px;
+          border: none;
+          border-radius: 15px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 24px;
+          cursor: pointer;
+          margin-bottom: 33px;
+          transition: background-color 0.4s, color 0.4s; 
+      }
 
-            .wallet{
-                font-family: 'Iceland', cursive;
-                font-weight: 500;
-                font-size: 33px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class = "navbar">
-            <nav>
-                <ul>
-                    <li><a href="http:/landingpage">What</a></li>
-                    <li><a href="http:/how">How</a></li>
-                    <li><a href="http:/why">Why</a></li>
-                    <li><a class="Who" href="#">Who</a></li>
-                </ul>
-            </nav>
-        </div> 
-        <!-- <button class="continue_wallet"><span class="wallet">Connect Wallet</span></button>       -->
-    
-    <div>
-      <div style = "justify-content: center" class="button-holder">
+      .continue_wallet4:hover{
+          /* background-color: rgb(74, 215, 163);
+          margin-top: 639px;
+          margin-left: 80px;
+          padding: 16px;
+          width: 271px;
+          border: none;
+          border-radius: 6px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 18px;
+          cursor: pointer; */
+          background-color: rgb(163,237,210);
+          color: rgb(0, 0, 32);
+      }
+
+      .continue_wallet5{
+          background-color: rgb(74, 215, 163);
+          /* margin-top: 32px; */
+          margin-left: -1px;
+          padding: 20px;
+          width: 146px;
+          height: 72px;
+          border: none;
+          border-radius: 15px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 24px;
+          cursor: pointer;
+          margin-bottom: 33px;
+          transition: background-color 0.4s, color 0.4s; 
+      }
+
+      .continue_wallet5:hover{
+          /* background-color: rgb(74, 215, 163);
+          margin-top: 639px;
+          margin-left: 80px;
+          padding: 16px;
+          width: 271px;
+          border: none;
+          border-radius: 6px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 18px;
+          cursor: pointer; */
+          background-color: rgb(163,237,210);
+          color: rgb(0, 0, 32);
+      }
+
+      .continue_wallet6{
+          background-color: rgb(74, 215, 163);
+          /* margin-top: 32px; */
+          margin-left: -1px;
+          padding: 20px;
+          width: 146px;
+          height: 72px;
+          border: none;
+          border-radius: 15px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 24px;
+          cursor: pointer;
+          margin-bottom: 33px;
+          transition: background-color 0.4s, color 0.4s; 
+      }
+
+      .continue_wallet6:hover{
+          /* background-color: rgb(74, 215, 163);
+          margin-top: 639px;
+          margin-left: 80px;
+          padding: 16px;
+          width: 271px;
+          border: none;
+          border-radius: 6px;
+          color: rgb(0, 0, 32);
+          font-weight: bold;
+          font-size: 18px;
+          cursor: pointer; */
+          background-color: rgb(163,237,210);
+          color: rgb(0, 0, 32);
+      }
+
+      /* nav{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 35px;
+          padding-left: 51%;
+      }
+      nav ul li{
+          font-size: 24px;
+          list-style-type: none;
+          display: inline-block;
+          padding: 10px 51px;
+          font-family: 'Jost', sans-serif;
+          
+      }
+      nav ul li a{
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.3s, text-decoration 0.3s;
+      }
+      nav ul li a:hover{
+          color: rgb(74, 215, 163);
+          text-decoration: underline;
+          font-weight: bold;
+          
+      } */
+
+      .wallet{
+          font-family: 'Iceland', cursive;
+          font-weight: 500;
+          font-size: 37px;
+      }
+
+      .BigProf{
+          border-radius: 15px;
+          display: block;
+      }
+
+      .Profile{
+          margin-left: 1299px;
+          margin-top: 47px;
+
+          position: absolute;
+              top:0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+
+          cursor: pointer;
+      }
+
+      .avatar {
+          vertical-align: middle;
+          width: 68px;
+          height: 68px;
+          border-radius: 50%;
+      }
+
+      .BackB{
+          margin-top: 47px;
+          margin-left: 44px;
+          font-size: 35px;
+          font-weight: 700;
+          background-color: transparent;
+          border: none;
+          color: white;
+          cursor: pointer;
+          transition: color 0.4s;
+          
+      }
+
+      .BackB:hover{
+          color: rgb(74, 215, 163);
+      }
+
+      .ProfB{
+          cursor : pointer;
+      }
+
+      /* .InputBox input{
+          margin-top: 416px;
+          margin-left: 480px;
+          width:35.35%;
+          padding: 17px;
+          border: none;
+          border-radius: 11px;
+          background: white;
+          background-color: transparent;
+          
+          color: rgb(255, 255, 255);
+          font-size: 24px;
+          font-family: 'Jost', sans-serif;
+      } */
+
+      .Beech {
+              width: 100px;
+              height: 100px;
+              /* background-color: red; */
+              
+              position: absolute;
+              top:0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              
+              margin-top: 377px;
+              margin-left: 940px;
+          }
+          ::placeholder{
+              color: rgb(183, 183, 183);
+              font-weight: 10;
+          }
+
+          p{
+              color: white;
+          }
+
+          nav{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 260px;
+          padding-left: 50px;
+
+           }
+
+           nav ul li{
+          font-size: 24px;
+          list-style-type: none;
+          display: inline-block;
+          padding:10;
+          font-family: 'Jost', sans-serif;
+          
+      }
+      nav ul li p{
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s, text-decoration 0.3s;
+          margin: 20px;
+      }
+
+
+          /* .amount{
+              margin-right: 100px;
+          } */
+
+          li {
+            border: 2px solid white;
+          }
+  </style>
+
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="Logo" href="/">Zapp</a>
+      <a style="margin-left: 120vh;" class="What" href="#">What</a>
+      <a href="http:/how">Implementation doc</a>
+      <a href="http:/why">Zap need</a>
+      <a href="http:/who">About us</a>
+    </div>
+    <!-- <button class="button-49" role="button">Button 49</button> -->
+      <div class="button-holder">
         <button type="button" class="continue_wallet" role="button" onClick="button()">
           <span class="wallet">Connect </span>
         </button>
-    </div>
-    </div>
-    <style>
-      /* .navbar {
-        float: left;
-        display:block;
-      }
-       .button-holder {
-        float: left;
-        display:block;
-      }
-    .clear {
-        clear: both; 
-      } */
-  </style>
+      </div>
   </body>
-
-  <style>
-    .navbar  {
-      font-size:250%;
-    }
-    #space {
-      margin-right: 3%;
-    }
-  </style>
   <script>
     //connect metamask
     let account;
