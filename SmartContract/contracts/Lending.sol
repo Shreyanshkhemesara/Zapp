@@ -26,6 +26,11 @@ contract Lending is Ownable {
         B_ID_Counter.increment();
     }
 
+    function lends(uint256 B_ID, address borrower, uint amount)external payable {
+        require(msg.value == amount, "Please provide the correct amount.");
+        B_data[borrower] += amount;
+    }
+
     function lend(uint256 B_ID) external payable returns(bool){
         require(msg.sender != B_data[B_ID].B_address, "Lender and borrower cant be same.");
         require(!B_data[B_ID].hasRecieved,"Borrow's request has already been fulfilled !!" );

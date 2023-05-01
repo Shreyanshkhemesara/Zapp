@@ -14,6 +14,11 @@ app.get("/LB", (req, res) => {
     res.sendFile(path.join(__dirname + "/lend_or_borrow.html"));
 })
 
+
+app.get("/success", (req, res) => {
+    res.sendFile(path.join(__dirname + "/success.html"));
+})
+
 app.get("/lend", (req, res) => {
     res.sendFile(path.join(__dirname + "/lendlist.html"));
 })

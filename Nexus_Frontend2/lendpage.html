@@ -309,6 +309,7 @@
         }
 
         var result = localStorage.getItem("Response_data");
+        var __id = JSON.parse(result)[0]._id;
         var bid = JSON.parse(result)[0].BID;
         var address = JSON.parse(result)[0].Address;
         document.getElementById("address").innerHTML += address;
@@ -536,8 +537,27 @@
             
             const amount = await Web3.utils.toWei(`${_amount}`, 'ether');//get amount from mongo db, making it hardcoded for now;
             console.log("waiting for ether connection")
-            await window.contract.methods.lend(B_Id).send({from:account, value:amount});
+            // await window.contract.methods.lend(B_Id).send({from:account, value:amount});
+            await remove(B_Id).then((console.log('money lent here')))
+            // goToSuccess();
             console.log("money lent")
         }
+
+        const remove = async (B_id) => {
+            
+            const reqOptions = {
+                method: 'DELETE',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ BID: B_id, Address: `${account}`, amount: _amount, __id : __id })
+            };
+            console.log(reqOptions.body)
+            console.log('done done done- borrow done');
+            // goToLB();
+            await fetch(`http://127.0.0.1:3000/`, reqOptions).then(console.log("done deleting"))
+        }
+        
+    const goToSuccess = () => {
+        window.location.href = "http:/success";
+    }
     </script>
 </html> 
