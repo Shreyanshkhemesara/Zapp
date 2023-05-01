@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <style>
-            
+
         body{
             /* width: 1512px;
             height: 982px; */
             /* background-image: url('./MAIN4.jpg'); */
             background-size: cover;
-            background-color: black;
+            background-color: rgb(74, 215, 163);
             background-repeat: no-repeat;
             /* background-attachment: fixed; */
         }
@@ -307,6 +307,7 @@
             cursor : pointer;
         }
 
+        
         /* .InputBox input{
             margin-top: 416px;
             margin-left: 480px;
@@ -398,9 +399,15 @@
             <img src="Profile_DP.jpg" alt="Avatar" class="avatar" onclick="profile()">
         </div>
     </a>
-    <div class="InputBox">
+    <!-- <div class="InputBox">
         <input type="text" required="required" id="Amount" placeholder="Enter Filecoin (TFIL) amount">
-    </div>
+    </div> -->
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg"><b>Large</b></span>
+        </div>
+        <input type="text" required="required" id="Amount" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Filecoin (TFIL) amount">
+      </div>
     <div class="Beech">
         <button class="btn-all" onclick="Borrow()"><span class="wallet">Borrow</span></button>
     </div>

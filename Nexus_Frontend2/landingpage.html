@@ -30,7 +30,7 @@
           height: 982px; */
           /* background-image: url('./MAIN4.jpg'); */
           background-size: cover;
-          background-color: black;
+          background-color: rgb(11, 197, 188);
           background-repeat: no-repeat;
           /* background-attachment: fixed; */
       }
@@ -44,7 +44,7 @@
           height: 72px;
           border: none;
           border-radius: 15px;
-          color: rgb(0, 0, 32);
+          color: rgb(11, 197, 188);
           font-weight: bold;
           font-size: 24px;
           cursor: pointer;
@@ -77,7 +77,7 @@
           height: 72px;
           border: none;
           border-radius: 15px;
-          color: rgb(0, 0, 32);
+          color: rgb(11, 197, 188);
           font-weight: bold;
           font-size: 24px;
           cursor: pointer;
@@ -386,21 +386,35 @@
   </style>
 
   </head>
+  <style>
+    .navbar {
+      padding: 1%;
+      background: rgb(74, 215, 163);
+    }
+  </style>
   <body>
-    <div class="topnav">
-      <a class="Logo" href="/">Zapp</a>
-      <a style="margin-left: 120vh;" class="What" href="#">What</a>
-      <a href="http:/how">Implementation doc</a>
-      <a href="http:/why">Zap need</a>
-      <a href="http:/who">About us</a>
-    </div>
-    <!-- <button class="button-49" role="button">Button 49</button> -->
-    <div class="button-holder">
-      <button type="button" class="continue_wallet" role="button" onClick="button()">
-        <span class="wallet">Connect </span>
-      </button>
-    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Zapp</a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" id = 'space'href="#">What </a>
+          <a class="nav-item nav-link" id = 'space' href="http:/how">Implementation do</a>
+          <a class="nav-item nav-link" id = 'space' href="http:/why">Zapp need</a>
+          <a class="nav-item nav-link disabled" id = 'space' href="http:/who">About us</a>
+        </div>
+      </div>
+    </nav>
   </body>
+
+  <style>
+    .navbar  {
+      font-size:250%;
+    }
+    #space {
+      margin-right: 3%;
+    }
+  </style>
   <script>
     //connect metamask
     let account;

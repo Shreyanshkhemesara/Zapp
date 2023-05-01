@@ -17,7 +17,7 @@
         <style>
             body{
                 /* background-image: url('./MAIN6.jpg'); */
-                background-color: black;
+                background-color: rgb(74, 215, 163);
                 /* background-attachment: fixed; */
             }
             input {
@@ -145,9 +145,6 @@
                     width: 65vh;
                 }
 
-                div {
-                    /* color: white; */
-                }
 
 
                 .baap {
@@ -282,18 +279,26 @@
         <div class="baap">
             <p id="address" class="address">Address : </p>
             <p id="amount" class="amount">Amount to be given : </p>
-            <div class="ipBox" >
-                <!-- Interest rate : -->
-                <input type ="text" id="rate" placeholder="Interest rate" required = "required" >
-            </div>
-            <div class="ipBox1" >
-                <!-- B id for transaction ref -->
-                <input type ="text" id="b_id" placeholder="B id" required = "required" >
-            </div>
+            
+            
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">Enter Interest Rate</span>
+                </div>
+                <input type="text" id="rate" placeholder="Interest rate" required = "required" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+              </div>
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">Enter B_id</span>
+                </div>
+                <input type="text" id="b_id" placeholder="B id" required = "required" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+              </div>
+            
             <div class = "Beech">
                 <button class="btn-all" onclick="lendFinal()"><span class="wallet">Lend</span></button>      
             </div>
         </div>
+        
     </body>
     <script>
         const lendlist = ()=>{
